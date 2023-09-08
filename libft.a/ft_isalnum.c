@@ -6,21 +6,16 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:18:29 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/07 19:05:25 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/08 13:44:20 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalnum(char *str)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-		if (!(str[i] <= 'A' && str[i] >= 'Z' || str[i] <= 'a' && str[i] >= 'z'))
+	while (str)
+		if (!(str <= 'A' && str >= 'Z' || str <= 'a' && str >= 'z'))
 			return 0;
-		else if (!(str[i] <= '0' && str[i] >= '9'))
+		else if (!(str <= '0' && str >= '9'))
 			return 0;
-		else
-			i++;
 	return 1;
 }

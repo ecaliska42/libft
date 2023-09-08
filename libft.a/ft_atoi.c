@@ -6,7 +6,7 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 19:31:50 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/07 19:06:14 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/08 14:27:35 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,14 @@ return (num * neg);
 /*
 int main (void)
 {
-    const char nptr[] = "   -  2asd 2";
+    const char nptr[] = "b422";
 	printf("this is the ft_ funct.: %d\n", ft_atoi(nptr));
 	printf("this is the orig. funct.: %d\n", atoi(nptr));
     return 0;
 }
 */
+
+ //int    main(void) {     printf("Haben:\n");     printf("1__ %d\n", ft_atoi("     123"));     printf("2__ %d\n", ft_atoi("-4123"));     printf("3__ %d\n", ft_atoi("--4123"));     printf("4__ %d\n", ft_atoi("---4123"));     printf("5__ %d\n", ft_atoi("-+-42"));     printf("6__ %d\n", ft_atoi(" ---+--+1234ab567"));     printf("6__ %d\n", ft_atoi(" - --+--+1234ab567"));     printf("7__ %d\n", ft_atoi("b"));     printf("8__ %d\n", ft_atoi("b42"));     printf("\n");     printf("Soll:\n");     printf("1__ %d\n", atoi("     123"));     printf("2__ %d\n", atoi("-4123"));     printf("3__ %d\n", atoi("--4123"));     printf("4__ %d\n", atoi("---4123"));     printf("5__ %d\n", atoi("-+-42"));     printf("6__ %d\n", atoi(" ---+--+1234ab567"));     printf("6__ %d\n", atoi(" - --+--+1234ab567"));     printf("7__ %d\n", atoi("b"));     printf("8__ %d\n", atoi("b42")); }
 
 /*
 
