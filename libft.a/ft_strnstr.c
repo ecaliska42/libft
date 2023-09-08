@@ -6,14 +6,13 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 19:32:06 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/08 18:55:13 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/08 21:10:13 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <bsd/string.h>
 #include <string.h>
-
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -51,10 +50,6 @@ int main(void)
 	printf("this is the original function: %s\n",strnstr(big, little, len));
 }
 */
-
-
-
-
 /*The strnstr() function locates the first occurrence of the null-termi‐
 nated string little in the string big, where not more than len charac‐
 ters are searched.  Characters that appear after a ‘\0’ character are

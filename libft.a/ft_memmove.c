@@ -6,22 +6,26 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 19:07:11 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/08 14:55:55 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/08 21:16:16 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char	*a;
-	unsigned char	temp[n];
+	unsigned char	*temp;
 	unsigned char	*p;
 	size_t			i;
 
 	a = (unsigned char *)dest;
 	p = (unsigned char *)src;
 	i = 0;
+	temp = (unsigned char *)malloc(n);
+	if (!temp)
+		return (NULL);
 	while (p[i] && i < n)
 	{
 		temp[i] = p[i];
