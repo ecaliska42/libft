@@ -6,26 +6,26 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 19:32:20 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/07 19:06:24 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/08 15:04:23 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <ctype.h>
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    if (c >= 97 && c <= 122)
-        c -= 32;
-    return c;
+	if (c >= 97 && c <= 122)
+		c -= 32;
+	return (c);
 }
 /*
 int main(void)
 {
-    int c = 'h';
-    printf("this is ft_ function: %c\n", ft_toupper(c));
-    printf("this is original function: %c\n", toupper(c));
-    return 0;
+	int c = 'h';
+	printf("this is ft_ function: %c\n", ft_toupper(c));
+	printf("this is original function: %c\n", toupper(c));
+	return 0;
 }
 /*If  c is a lowercase letter, toupper() returns its uppercase equivalent,
 if an uppercase representation exists in the current locale.  Otherwise,

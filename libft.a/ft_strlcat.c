@@ -6,7 +6,7 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 19:32:01 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/07 19:06:20 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/08 15:00:17 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,35 +14,38 @@
 #include <string.h>
 #include <stdio.h>
 
-
-
-size_t ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t s_dst = strlen(dst);
-    size_t s_src = strlen(src);
-    size_t i = 0;
-    size_t j = 0;
-    while (src[i] && i + j < size)
-    {
-        dst[i + s_dst] = src[i];
-        i++;
-        j++;
-    }
-    dst[i + j + s_dst] = '\0';
-    return (s_dst+s_src);
+	size_t	s_dst;
+	size_t	s_src;
+	size_t	i;
+	size_t	j;
+
+	s_dst = strlen(dst);
+	s_src = strlen(src);
+	i = 0;
+	j = 0;
+	while (src[i] && i + j < size)
+	{
+		dst[i + s_dst] = src[i];
+		i++;
+		j++;
+	}
+	dst[i + j + s_dst] = '\0';
+	return (s_dst + s_src);
 }
 /*
 
 int main(void)
 {
-    char dst[] = "This is";
-    const char src[] = "a potentially long string";
-    size_t size = 16;
-    printf("this is the dst string: %s\n",dst);
-    //printf("this is the ft_function: %zu\n",ft_strlcat(dst,src,size));
-    //printf("this is the dst string with ft: %s\n",dst);
-    printf("this is the original function: %zu\n",strlcat(dst,src,size));
-    printf("this is the dst new string: %s\n",dst);
+	char dst[] = "This is";
+	const char src[] = "a potentially long string";
+	size_t size = 16;
+	printf("this is the dst string: %s\n",dst);
+	//printf("this is the ft_function: %zu\n",ft_strlcat(dst,src,size));
+	//printf("this is the dst string with ft: %s\n",dst);
+	printf("this is the original function: %zu\n",strlcat(dst,src,size));
+	printf("this is the dst new string: %s\n",dst);
 }
 */
 
@@ -70,10 +73,17 @@ int main()
 */
 
 /*
-The strlcpy() and strlcat() functions copy and concatenate strings respectively.  They are designed to be safer, more consistent, and less error prone replacements for strncpy(3) and
-strncat(3).  Unlike those functions, strlcpy() and strlcat() take the full size of the buffer (not just the length) and guarantee to NUL-terminate the result (as long as size is larger than 0
-or, in the case of strlcat(), as long as there is at least one byte free in dst).  Note that a byte for the NUL should be included in size.  Also note that strlcpy() and strlcat() only oper‐
-ate on true “C” strings.  This means that for strlcat() both src and dst must be NUL-terminated.
+The strlcpy() and strlcat() functions copy and concatenate strings
+respectively. They are designed to be safer, more consistent,
+and less error prone replacements for strncpy(3) and strncat(3).
+Unlike those functions, strlcpy() and strlcat() take the full
+size of the buffer (not just the length) and guarantee to NUL-terminate
+the result (as long as size is larger than 0 or, in the case of strlcat(),
+as long as there is at least one byte free in dst).  Note that a byte for the NUL
+should be included in size.  Also note that strlcpy() and strlcat() only oper‐
+ate on true “C” strings.  This means that for strlcat() both src and dst must
+be NUL-terminated.
 
-The strlcat() function appends the NUL-terminated string src to the end of dst.  It will append at most size - strlen(dst) - 1 bytes, NUL-terminating the result.
+The strlcat() function appends the NUL-terminated string src to the end of dst.
+It will append at most size - strlen(dst) - 1 bytes, NUL-terminating the result.
 */

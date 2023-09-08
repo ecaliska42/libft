@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecaliska <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:18:29 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/05 12:31:15 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/08 14:42:05 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
+
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
-	unsigned char *p;
-	
+	size_t			i;
+	unsigned char	*p;
+
 	i = 0;
 	p = (unsigned char *)s;
 	while (i < n)
 	{
 		p[i] = '\0';
 		i++;
-		
 	}
 }
 /*
@@ -40,6 +39,7 @@ int	main(void)
 }
 
 /*
-The  bzero()  function  erases  the data in the n bytes of the memory starting at the location
+The  bzero()  function  erases  the data in the n bytes of the memory starting
+at the location
 pointed to by s, by writing zeros (bytes containing '\0') to that area.
 */

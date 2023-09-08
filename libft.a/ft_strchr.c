@@ -6,7 +6,7 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 19:31:58 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/07 19:06:20 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/08 14:57:16 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i = 0;
+	int	i;
+
+	i = 0;
 	while (s[i])
 	{
 		if (s[i] == (char)c)
 			return ((char *)&s[i]);
 		i++;
 	}
-	return NULL;
+	return (NULL);
 }
 
 /*

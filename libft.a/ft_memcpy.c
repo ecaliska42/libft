@@ -6,33 +6,37 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 18:13:56 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/07 19:06:18 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/08 14:53:19 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-void *ft_memcpy(void *dest, const void *src, size_t n)
-{
-    size_t i = 0;
-    unsigned char *p = (unsigned char *) src;
-    unsigned char *a = (unsigned char *) dest;
 
-    while (p[i] && i < n)
-    {
-        a[i] = p[i];
-        i++;
-    }
-    return a;
+void	*ft_memcpy(void *dest, const void *src, size_t n)
+{
+	size_t			i;
+	unsigned char	*p;
+	unsigned char	*a;
+
+	i = 0;
+	p = (unsigned char *) src;
+	a = (unsigned char *) dest;
+	while (p[i] && i < n)
+	{
+		a[i] = p[i];
+		i++;
+	}
+	return (a);
 }
 /*
 int main(void)
 {
-    char dest[] = "ASfhehsiudfh";
-    char src[] = "Hello there";
-    size_t n = 3;
-    ft_memcpy(&dest, &src, n);
-    printf("this is the destination %s\n", dest);
-    return 0;
+	char dest[] = "ASfhehsiudfh";
+	char src[] = "Hello there";
+	size_t n = 3;
+	ft_memcpy(&dest, &src, n);
+	printf("this is the destination %s\n", dest);
+	return 0;
 }
 
 
