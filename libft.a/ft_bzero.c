@@ -6,14 +6,16 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:18:29 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/08 14:42:05 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/08 19:27:34 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include <string.h>
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t			i;
+	size_t	i;
 	unsigned char	*p;
 
 	i = 0;
@@ -25,7 +27,6 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 /*
-#include <stdio.h>
 
 int	main(void)
 {
