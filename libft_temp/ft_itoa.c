@@ -6,7 +6,7 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 21:25:32 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/10 14:31:36 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/12 22:51:59 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,38 @@
 
 char *ft_itoa(int n)
 {
-    char mal = (char *)malloc (sizeof(char) * 10);
-    if (n = "-2147483648")
-        return ("-2147483648");
-    if (n < 0)
-        n *= -1;
-    else
-        ft_itoa;
+	int i = 0;
+	int j = n;
+	int p = 0;
+	char *str = NULL;
+
+	while(j > 0)
+	{
+		j/=10;
+		i++;
+	}
+	
+	str = (char *) malloc(sizeof(char) * i + 1);
+
+	while (i != 0)
+	{
+		str[p] = 0;
+	}
+
+
+	printf("%d", i);
+	/*
+	if (n = "-2147483648")
+		return ("-2147483648");
+	*/
+	return (str);
+}
+
+
+
+int main(void)
+{
+	int n = 50235;
+	ft_itoa(n);
+	return(0);
 }
