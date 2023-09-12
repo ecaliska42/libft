@@ -6,35 +6,42 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 20:09:16 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/12 19:11:58 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/12 21:50:08 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <string.h>
+#include <stddef.h>
+#include <stdio.h>
 
-static int	count_sep(char const *s, char c)
+static int	count_word(char const *s, char c)
 {
 	int	i;
-	int	seps;
+	int	word;
 
 	i = 0;
-	seps = 0;
-	while (s[i])
+	word = 0;
+	while(s[i])
 	{
 		if (s[i] == c)
 		{
-			seps++;
+			i++;
 		}
-		i++;
+		else
+		{
+		    word++;
+			i++;
+            while(s[i] != c)
+                i++;
+		}
 	}
-	return (seps);
+	return (word);
 }
-
 
 char	**ft_split(char const *s, char c)
 {
-	int	i;
+	size_t	i;
 	int	start;
 	int end;
 	int j;
@@ -42,16 +49,28 @@ char	**ft_split(char const *s, char c)
 	int len;
 	char **str;
 
+	if (!s)
+		return (NULL);
+
 	j = 0;
 	i = 0;
-	str = (char **)malloc(sizeof(char *) * count_sep(s, c) + 1);
+	str = (char **)malloc(sizeof(char *) * count_word(s, c) + 1);
 	if (!str)
 		return (NULL);
-	while (s[i] == c)
-		i++;
+	//while (s[i] == c)
+	//	i++;
 	while (s[i])
 	{
+		while (s[i] == c)
+			i++;
 		start = i;
+		if (i == strlen(s))
+		{
+			str[j] = (char *)malloc(sizeof(char));
+			if (!str[j])
+				free(str[j]);
+			break;
+		}
 		while (s[i] != c && s[i])
 			i++;
 		end = i;
@@ -75,14 +94,14 @@ char	**ft_split(char const *s, char c)
 	return (str);
 }
 /*
-#include<stdio.h>
-
 int    main(void)
 {
 	int i = 0;
-	char	tab[] = "5****1*22*333*444*5*6*";
+	
+	char	tab[] = "**asf**affe*ff*";
+	ft_split(tab, '*');
 	char **out = (char **)ft_split(tab, '*');
-	while (out[i])
+	while (i < count_word(tab, '*') + 1)
 	{
 		printf("%s\n", out[i]);
 		free(out[i]);
