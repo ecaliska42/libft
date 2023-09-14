@@ -6,7 +6,7 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 20:09:16 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/14 19:37:49 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/14 19:57:46 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <stddef.h>
 #include <stdio.h>
 
-static int	count_word(char const *s, char c)
+int	count_word(char const *s, char c)
 {
 	int	i;
 	int	word;
@@ -39,7 +39,7 @@ static int	count_word(char const *s, char c)
 	return (word);
 }
 
-static void	freeing(char *str, int j)
+char	**freeing(char *str, int j)
 {
 	while (j > 0)
 	{
@@ -47,9 +47,10 @@ static void	freeing(char *str, int j)
 		j--;
 	}
 	free(str);
+	return (NULL);
 }
 
-static char	*duplicate(const char *s, int c)
+char	*duplicate(const char *s, int c)
 {
 	char	*dup;
 	int		i;
@@ -77,7 +78,7 @@ static char	*duplicate(const char *s, int c)
 	return (dup);
 }
 
-static char	*strchr(const char *s, int c)
+char	*strchr(const char *s, int c)
 {
 	int	i;
 
@@ -107,6 +108,8 @@ char	**ft_split(char const *s, char c)
 		if (strchr(&s[i], c) == NULL)
 		{
 			str[j] = duplicate(&s[i], c);
+			if (!str[j])
+				return (freeing(str[j], j));
 			i += strlen(str[j]);
 			j++;
 		}
@@ -120,7 +123,7 @@ int    main(void)
 {
 	int i = 0;
 	
-	char    tab[] = "***";
+	char    tab[] = "*afsdf*asfdf";
 	char **out = (char **)ft_split(tab, '*');
 	while (i < 3)
 	{
