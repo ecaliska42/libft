@@ -6,7 +6,7 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 19:32:20 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/14 20:51:10 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/14 20:55:57 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ int main(void)
 	printf("this is original function: %c\n", toupper(c));
 	return 0;
 }
-/*If  c is a lowercase letter, toupper() returns its uppercase equivalent,
-if an uppercase representation exists in the current locale.  Otherwise,
+/*If  c is a lowercase letter, toupper() returns its uppercase
+equivalent,
+if an uppercase representation exists in the current locale. 
+Otherwise,
 it returns c.*/

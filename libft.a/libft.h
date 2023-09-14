@@ -6,18 +6,18 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 20:21:47 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/14 20:51:56 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/14 21:05:40 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <string.h>
-#include <stdlib.h>
-#include <stddef.h>
-#include <unistd.h>
-#include <ctype.h>
+# include <string.h>
+# include <stdlib.h>
+# include <stddef.h>
+# include <unistd.h>
+# include <ctype.h>
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);

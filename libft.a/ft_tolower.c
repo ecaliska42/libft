@@ -6,12 +6,11 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 19:32:19 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/14 20:44:32 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/14 21:05:35 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 int	ft_tolower(int c)
 {
@@ -30,6 +29,7 @@ int main (void)
 	return 0;
 }
 */
-/*If  c is an uppercase letter, tolower() returns its lowercase equivalent,
+/*If  c is an uppercase letter, tolower() returns its lowercase
+equivalent,
 if a lowercase representation exists
 in the current locale.  Otherwise, it returns c.*/
