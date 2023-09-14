@@ -6,7 +6,7 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 21:25:32 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/14 13:53:46 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/14 19:37:25 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int	main(void)
 	int		n;
 	char	*str;
 
-	n = 7483648;
+	n = -7483648;
 	str = ft_itoa(n);
 	printf("%s", str);
 	return (0);
