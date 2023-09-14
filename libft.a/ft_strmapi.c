@@ -6,7 +6,7 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 21:25:18 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/11 14:47:50 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/14 14:30:10 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str = (char *)malloc(sizeof(char) * strlen((char *)s) + 1);
 	if (!str)
 		return (NULL);
-
 	while (s[i])
 	{
 		str[i] = (f)(i, s[i]);

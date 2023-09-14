@@ -6,7 +6,7 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 19:07:11 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/10 22:57:17 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/14 14:31:33 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (a);
 }
-
+/*
 int main(void)
 {
 	//unsigned char dest[] ="AAAAAAAAA";
