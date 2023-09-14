@@ -6,13 +6,11 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 21:25:19 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/10 14:00:58 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/14 20:49:18 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -23,13 +21,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	str1 = (char *)s1;
 	i = 0;
-	str = (char *)malloc(sizeof(char) * (strlen(s1)+strlen(s2)));
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s1)+ft_strlen(s2)));
 	if (!str)
 		return (NULL);
-	sizes = strlen(s1) + strlen(s2);
+	sizes = ft_strlen(s1) + ft_strlen(s2);
 	while (s2[i])
 	{
-		str1[strlen(s1) + i] = s2[i];
+		str1[ft_strlen(s1) + i] = s2[i];
 		i++;
 	}
 	str = str1;

@@ -6,13 +6,11 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 19:31:39 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/08 15:01:33 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/14 20:49:56 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <bsd/string.h>
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
@@ -25,7 +23,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		i++;
 	}
 	dst[i] = '\0';
-	return (strlen(src));
+	return (ft_strlen(src));
 }
 /*
 int main(void)

@@ -6,12 +6,11 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 19:31:58 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/08 14:57:16 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/14 20:44:22 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

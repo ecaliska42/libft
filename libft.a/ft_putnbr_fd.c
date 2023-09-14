@@ -6,14 +6,11 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 21:25:25 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/10 14:03:53 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/14 20:44:57 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <unistd.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void	print(char c, int fd)
 {

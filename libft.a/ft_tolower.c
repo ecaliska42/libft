@@ -6,12 +6,12 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 19:32:19 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/08 15:03:59 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/14 20:44:32 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
+
 
 int	ft_tolower(int c)
 {
@@ -20,6 +20,8 @@ int	ft_tolower(int c)
 	return (c);
 }
 /*
+#include <stdio.h>
+#include <ctype.h>
 int main (void)
 {
 	int c = 'h';

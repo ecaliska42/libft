@@ -6,13 +6,11 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 19:32:01 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/08 15:00:17 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/14 20:49:42 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <bsd/string.h>
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -21,8 +19,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	i;
 	size_t	j;
 
-	s_dst = strlen(dst);
-	s_src = strlen(src);
+	s_dst = ft_strlen(dst);
+	s_src = ft_strlen(src);
 	i = 0;
 	j = 0;
 	while (src[i] && i + j < size)
@@ -85,5 +83,5 @@ ate on true “C” strings.  This means that for strlcat() both src and dst mus
 be NUL-terminated.
 
 The strlcat() function appends the NUL-terminated string src to the end of dst.
-It will append at most size - strlen(dst) - 1 bytes, NUL-terminating the result.
+It will append at most size - ft_strlen(dst) - 1 bytes, NUL-terminating the result.
 */

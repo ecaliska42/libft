@@ -6,14 +6,11 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 20:09:16 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/14 19:57:46 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/14 20:48:44 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
-#include <stddef.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	count_word(char const *s, char c)
 {
@@ -110,7 +107,7 @@ char	**ft_split(char const *s, char c)
 			str[j] = duplicate(&s[i], c);
 			if (!str[j])
 				return (freeing(str[j], j));
-			i += strlen(str[j]);
+			i += ft_strlen(str[j]);
 			j++;
 		}
 		i++;

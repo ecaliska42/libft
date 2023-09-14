@@ -6,13 +6,11 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 18:13:56 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/14 14:37:56 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/14 20:48:50 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
@@ -23,8 +21,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	size_t			sizesrc;
 
 	i = 0;
-	sizedest = strlen(dest);
-	sizesrc = strlen(src);
+	sizedest = ft_strlen(dest);
+	sizesrc = ft_strlen(src);
 	p = (unsigned char *) src;
 	a = (unsigned char *) dest;
 	if (sizedest < sizesrc)

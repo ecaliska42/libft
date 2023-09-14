@@ -6,12 +6,11 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:18:29 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/08 21:17:40 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/14 20:46:21 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
