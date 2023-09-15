@@ -16,7 +16,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	char	*mal;
 
-	if (nmemb == 0 || size == 0)
+	if (nmemb <= 0 || size <= 0)
 		return (NULL);
 	mal = malloc (nmemb * size);
 	if (!mal)
