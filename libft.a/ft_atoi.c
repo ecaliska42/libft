@@ -6,7 +6,7 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 19:31:50 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/14 20:46:25 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/15 13:47:18 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	number(const char *nptr)
 	int	i;
 
 	i = 0;
-	while (nptr[i] == 13 || nptr[i] == 32 || nptr[i] == 9 || nptr[i] == 10)
+	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
 	{
 		i++;
 	}
