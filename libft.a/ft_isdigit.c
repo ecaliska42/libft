@@ -12,10 +12,9 @@
 
 #include "libft.h"
 
-int	ft_isdigit(char *str)
+int	ft_isdigit(int c)
 {
-	if (!(*str <= '0' && *str >= '9'))
-		return (0);
-	else
+	if (c >= '0' && c <= '9')
 		return (1);
+	return (0);
 }

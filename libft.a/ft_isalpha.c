@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-int	ft_isalpha(char *str)
+int	ft_isalpha(int c)
 {
-	if (!((*str <= 'A' && *str >= 'Z') || (*str <= 'a' && *str >= 'z')))
-		return (0);
-	return (1024);
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+		return (1024);
+	return (0);
 }
