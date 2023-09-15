@@ -18,11 +18,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*subs;
 
 	i = 0;
-	subs = (char *)malloc(sizeof(char) * len);
+	if (start >= ft_strlen(s))
+		return (subs);
+	subs = (char *)malloc(sizeof(char) * len + 1);
 	if (!subs)
 		return (NULL);
 	while (i < len)
 		subs[i++] = s[start++];
+	subs[i] = '\0';
 	return (subs);
 }
 /*
@@ -35,4 +38,10 @@ int main(void)
 	size_t len = 8;
 	printf("this is the function %s\n", ft_substr(s, start, len));
 }
+*/
+/*
+Allocates (with malloc(3)) and returns a substring
+from the string ’s’.
+The substring begins at index ’start’ and is of
+maximum size ’len’.
 */

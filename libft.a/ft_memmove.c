@@ -22,6 +22,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	a = (unsigned char *)dest;
 	p = (unsigned char *)src;
 	i = 0;
+	if (n > ft_strlen((char *)a))
+		return (NULL);
 	temp = (unsigned char *)malloc(sizeof(char) * n);
 	if (!temp)
 		return (NULL);

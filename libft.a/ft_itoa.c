@@ -29,10 +29,11 @@ char	string(int j, char *str, int n)
 {
 	if (n < 0)
 	{
-		j += 1;
 		str[0] = '-';
 		n *= -1;
 	}
+	else if (n == 0)
+		str[0] = '0';
 	str[j] = 0;
 	j--;
 	while (n > 0)
@@ -57,6 +58,8 @@ char	*ft_itoa(int n)
 		str = "-2147483648";
 		return (str);
 	}
+	else if (n <= 0)
+		j += 1;
 	str = (char *) malloc(sizeof(char) * j + 1);
 	if (!str)
 		return (NULL);
