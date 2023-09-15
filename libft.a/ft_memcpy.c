@@ -6,7 +6,7 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 18:13:56 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/14 20:48:50 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/15 13:01:43 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	main(void)
 	//printf("this is the orig. functi.: %s\n", memcpy(&dest, &src, n));
 	return 0;
 }
-
+*/
 
 /*
 The  memcpy()  function  copies  n bytes from memory area src to memory

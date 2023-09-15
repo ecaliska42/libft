@@ -6,7 +6,7 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 21:25:27 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/14 20:45:15 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/15 13:06:00 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void	ft_putendl_fd(char *s, int fd)
 		write(fd, &s[i], 1);
 		i++;
 	}
-	write(1, '\n', 1);
+	write(1, "\n", 1);
 }

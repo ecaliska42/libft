@@ -35,6 +35,7 @@ int	main(void)
 	printf("new string %s", (unsigned char *)ft_memset(str, c, n));
 	return 0;
 }
+*/
 /*
 The  memset()  function  fills  the  first  n  bytes of the memory area
 pointed to by s with the constant byte c.

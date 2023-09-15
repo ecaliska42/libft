@@ -6,7 +6,7 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 19:07:11 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/14 20:45:34 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/15 13:01:24 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int main(void)
 	//printf("This is the destination %s\n", dest);
 	printf("This is the destination %s\n", dest2);
 }
-
+*/
 /*
 The  memmove()  function  copies n bytes from memory area src to memory
 area dest. The memory areas may overlap: copying takes place as though

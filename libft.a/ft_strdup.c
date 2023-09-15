@@ -6,7 +6,7 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 19:31:59 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/14 20:44:18 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/15 13:04:29 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strdup(const char *s)
 	int		i;
 
 	i = 0;
-	dup = (char *)malloc(sizeof(char) * (size(s)+1));
+	dup = (char *)malloc(sizeof(char) * (ft_strlen(s)+1));
 	if (!dup)
 		return (NULL);
 	while (s[i])

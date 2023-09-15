@@ -6,7 +6,7 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:18:29 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/14 20:46:02 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/15 12:59:19 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isdigit(char *str)
 {
-	if (!(str <= '0' && str >= '9'))
+	if (!(*str <= '0' && *str >= '9'))
 		return (0);
 	else
 		return (1);

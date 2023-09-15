@@ -6,7 +6,7 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 21:25:19 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/14 20:49:18 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/15 13:05:28 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		i;
 	char	*str;
-	int		sizes;
 	char	*str1;
 
 	str1 = (char *)s1;
@@ -24,7 +23,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str = (char *)malloc(sizeof(char) * (ft_strlen(s1)+ft_strlen(s2)));
 	if (!str)
 		return (NULL);
-	sizes = ft_strlen(s1) + ft_strlen(s2);
 	while (s2[i])
 	{
 		str1[ft_strlen(s1) + i] = s2[i];

@@ -6,7 +6,7 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 19:31:39 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/14 20:49:56 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/15 13:03:32 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int main(void)
 	
 }
 
-
+*/
 /*
 The strlcpy() and strlcat() functions copy and concatenate strings
 respectively. They are designed to be safer, more consistent,

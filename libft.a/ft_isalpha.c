@@ -6,7 +6,7 @@
 /*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:18:29 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/14 20:46:11 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/15 12:59:11 by ecaliska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isalpha(char *str)
 {
-	if (!(str <= 'A' && str >= 'Z' || str <= 'a' && str >= 'z'))
+	if (!((*str <= 'A' && *str >= 'Z') || (*str <= 'a' && *str >= 'z')))
 		return (0);
 	return (1024);
 }
