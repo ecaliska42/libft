@@ -55,7 +55,7 @@ char	*ft_itoa(int n)
 		str = (char *)malloc(sizeof(char) * 12);
 		if (!str)
 			return (NULL);
-		str = "-2147483648";
+		ft_strlcpy(str, "-2147483648", 12);
 		return (str);
 	}
 	else if (n <= 0)
@@ -72,7 +72,7 @@ int	main(void)
 	int		n;
 	char	*str;
 
-	n = -7483648;
+	n = -2147483648;
 	str = ft_itoa(n);
 	printf("%s", str);
 	return (0);
