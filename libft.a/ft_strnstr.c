@@ -23,9 +23,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	sizelit = ft_strlen(little);
 	if (!*little)
 		return ((char *)&big[i]);
-	while (big[i] != '\0' && i < len)
+	if (len <= 0)
+		return (NULL);
+	while (big[i] != '\0' && i <= len)
 	{
-		if (little[j] == big[i] && (i + sizelit) < len + 1)
+		if (little[j] == big[i] && (i + sizelit) <= len)
 		{
 			while (little[j] != '\0' && i < len + sizelit)
 				if (!(little[j++] == big[i++]))
@@ -37,15 +39,20 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
 /*
+#include <stdio.h>
+#include <bsd>
 int main(void)
 {
-	const char big [] = "asdfafsfa";
-	const char little [] = "fa";
-	size_t len = 4;
-	printf("this is the ft_function: %s\n",ft_strnstr(big, little, len));
-	printf("this is the original function: %s\n",strnstr(big, little, len));
+	char	*str;
+	char	*str2;
+	char haystack[30] = "aaabcabcd";
+	char needle[10] = "aabc";
+	str = ft_strnstr(haystack, "abcd", 9);
+	str2 = strnstr(haystack, "abcd", 9);
+	printf("%s\n", str);
+	printf("%s", str2);
+	return (0);
 }
 */
 /*The strnstr() function locates the first occurrence of the null-termi‐
