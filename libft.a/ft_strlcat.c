@@ -23,8 +23,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	s_src = ft_strlen(src);
 	i = 0;
 	j = s_dst;
-	if (size == 0)
-		return (s_dst + s_src);
+	if (size <= 0)
+		return (s_src);
 	while (src[i])
 	{
 		dst[j] = src[i];
@@ -75,13 +75,13 @@ int main()
 */
 
 /*
-The strlcpy() and strlcat() functions copy and concatenate 
+The strlcat() function concatenates 
 strings
 respectively. They are designed to be safer, more consistent,
 and less error prone replacements for strncpy(3) and 
 strncat(3).
-Unlike those functions, strlcpy() and strlcat() take the full
-size of the buffer (not just the length) and guarantee 
+Unlike those functions, strlcat() takes the full
+size of the buffer (not just the length) and guarantees 
 to NUL-terminate
 the result (as long as size is larger than 0 or, in the case 
 of strlcat(),
