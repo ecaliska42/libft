@@ -16,46 +16,35 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
-	size_t	sizelit;
 
 	i = 0;
-	j = 0;
-	sizelit = ft_strlen(little);
 	if (!*little)
-		return ((char *)&big[i]);
+		return ((char *)big);
 	if (len <= 0)
 		return (NULL);
-	while (big[i] != '\0' && i <= len)
+	if (len > strlen (big))
+		len = strlen(big);
+	while (big[i])
 	{
-		if (little[j] == big[i] && (i + sizelit) <= len)
-		{
-			while (little[j] != '\0' && i < len + sizelit)
-				if (!(little[j++] == big[i++]))
-					return (NULL);
-			return ((char *)&big[i - j]);
-		}
-		else
-			i++;
+		j = 0;
+		while (big[i + j] && big[i + j] == little[j]
+			&& i + j < len && little[j])
+			j++;
+		if (little[j] == '\0')
+			return ((char *)big + i);
+		++i;
 	}
 	return (NULL);
 }
 /*
 #include <stdio.h>
-#include <bsd>
 int main(void)
 {
-	char	*str;
-	char	*str2;
-	char haystack[30] = "aaabcabcd";
-	char needle[10] = "aabc";
-	str = ft_strnstr(haystack, "abcd", 9);
-	str2 = strnstr(haystack, "abcd", 9);
-	printf("%s\n", str);
-	printf("%s", str2);
-	return (0);
+
 }
 */
-/*The strnstr() function locates the first occurrence of the null-termi‐
+/*
+The strnstr() function locates the first occurrence of the null-termi‐
 nated string little in the string big, where not more than len charac‐
 ters are searched.  Characters that appear after a ‘\0’ character are
 not searched.  Since the strnstr() function is a FreeBSD specific API,
