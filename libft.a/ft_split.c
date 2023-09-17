@@ -38,10 +38,13 @@ int	count_word(char const *s, char c)
 
 char	**freeing(char *str, int j)
 {
-	while (j > 0)
+	int	i;
+
+	i = 0;
+	while (i < j)
 	{
-		free(&str[j]);
-		j--;
+		free(&str[i]);
+		i++;
 	}
 	free(str);
 	return (NULL);
