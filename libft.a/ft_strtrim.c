@@ -12,52 +12,38 @@
 
 #include "libft.h"
 
-/*char	*ft_strtrim(char const *s1, char const *set)
-{
-	size_t	setlen;
-	size_t	i;
-
-	i = 0;
-	setlen = ft_strlen(set);
-	while (s1[i])
-	{
-
-	}
-}
-*/
-/*
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*str1;
-	int		lens1;
-	int		lenset;
-	int		len;
-	char	*ret;
+	size_t	difference;
+	int		start;
+	char	*str;
+	int		end;
+	int		i;
 
-	str1 = (char *) s1;
-	lens1 = strlen(str1);
-	lenset = strlen(set);
-	if (strncmp(str1, set, lenset) == 0)
-		str1 = &str1[lenset];
-	if (strncmp(&str1[lens1 - lenset], set, lenset) == 0)
-		str1[lens1 - lenset] = '\0';
-	if (strncmp(&str1[lens1 - lenset - lenset], set, lenset) == 0)
-		str1[lens1 - lenset - lenset] = '\0';
-	len = strlen(str1);
-	ret = (char *) malloc(sizeof(char) * len + 1);
-	if (!ret)
+	start = 0;
+	i = 0;
+	end = ft_strlen(s1);
+	if (!s1 || !set)
 		return (NULL);
-	ret[strlen(str1)] = '\0';
-	while (len--)
-		ret[len] = str1[len];
-	return (ret);
+	while (start < end && ft_strchr (set, s1[start]))
+		start ++;
+	while (end > start && ft_strchr(set, s1[end - 1]))
+		end--;
+	difference = end - start;
+	str = (char *)malloc(sizeof(char) * difference + 1);
+	if (!str)
+		return (NULL);
+	while (difference--)
+		str[i++] = s1[start++];
+	str[i] = '\0';
+	return (str);
 }
-*/
+
 /*
 int main(void)
 {
 	char const s1 [] = "Hello WorldHel";
-	char const set [] = "\t";
+	char const set [] = "leH";
 	printf("%s", ft_strtrim(s1, set));
 }
 */
