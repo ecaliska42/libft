@@ -12,6 +12,20 @@
 
 #include "libft.h"
 
+/*char	*ft_strtrim(char const *s1, char const *set)
+{
+	size_t	setlen;
+	size_t	i;
+
+	i = 0;
+	setlen = ft_strlen(set);
+	while (s1[i])
+	{
+
+	}
+}
+*/
+/*
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str1;
@@ -38,7 +52,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		ret[len] = str1[len];
 	return (ret);
 }
-
+*/
 /*
 int main(void)
 {

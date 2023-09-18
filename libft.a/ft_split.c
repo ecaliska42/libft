@@ -36,60 +36,52 @@ int	count_word(char const *s, char c)
 	return (word);
 }
 
-char	**freeing(char *str, int j)
+char	**freeing(char **str, int j)
 {
 	int	i;
 
 	i = 0;
 	while (i < j)
 	{
-		free(&str[i]);
+		free(str[i]);
 		i++;
 	}
 	free(str);
 	return (NULL);
 }
 
-char	*duplicate(const char *s, int c)
+char	*duplic(const char *s, int c)
 {
 	char	*dup;
 	int		i;
-	int		j;
 	int		count;
 
 	i = 0;
-	j = 0;
 	count = 0;
 	while (s[i] != c && s[i])
 	{
-		j++;
 		i++;
 	}
-	dup = (char *)malloc(sizeof(char) * j + 1);
+	dup = malloc(sizeof(char) * i + 1);
 	if (!dup)
 		return (NULL);
-	while (count < j)
+	while (count < i)
 	{
 		dup[count] = s[count];
-		i++;
 		count++;
 	}
 	dup[count] = '\0';
 	return (dup);
 }
 
-char	*strchr(const char *s, int c)
+char	**isnot(char **str)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == (char)c)
-			return ((char *)&s[i]);
+	free(str);
+	str = malloc(sizeof(char *));
+	if (!str)
 		return (NULL);
-	}
-	return (NULL);
+	str[0] = NULL;
+	return (str);
 }
 
 char	**ft_split(char const *s, char c)
@@ -100,32 +92,35 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	str = (char **)malloc(sizeof(char *) * (count_word(s, c) + 1));
+	str = malloc(sizeof(char *) * (count_word(s, c) + 1));
 	if (!str)
 		return (NULL);
 	while (s[i])
 	{
-		if (strchr(&s[i], c) == NULL)
+		if (s[i] == c)
 		{
-			str[j] = duplicate(&s[i], c);
-			if (!str[j])
-				return (freeing(str[j], j));
-			i += ft_strlen(str[j]);
-			j++;
+			i++;
+			continue ;
 		}
-		i++;
+		str[j] = duplic(&s[i], c);
+		if (!str[j])
+			return (freeing(str, j));
+		i += ft_strlen(str[j++]);
 	}
 	str[j] = NULL;
+	if (j == 0)
+		return (isnot(str));
 	return (str);
 }
 /*
+
 int    main(void)
 {
 	int i = 0;
 	
-	char    tab[] = "*afsdf*asfdf";
-	char **out = (char **)ft_split(tab, '*');
-	while (i < 3)
+	char    *tab = "\0aa\0bbb";
+	char **out = (char **)ft_split(tab, '\0');
+	while (out[i])
 	{
 		printf("%s\n", out[i]);
 		free(out[i]);
