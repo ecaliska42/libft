@@ -18,15 +18,16 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	if (nmemb <= 0 || size <= 0)
 	{
-		mal = malloc(sizeof(char));
+		mal = (char *)malloc(0);
 		if (!mal)
 		{
 			free (mal);
 			return (NULL);
 		}
 		mal[0] = 0;
+		return (mal);
 	}
-	mal = malloc (nmemb * size);
+	mal = (char *)malloc (nmemb * size);
 	if (!mal)
 	{
 		free (mal);
