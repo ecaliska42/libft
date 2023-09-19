@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	number(const char *nptr)
+static int	number(const char *nptr)
 {
 	int	i;
 

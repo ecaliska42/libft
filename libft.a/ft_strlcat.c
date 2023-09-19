@@ -14,25 +14,33 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	s_dst;
-	size_t	s_src;
-	size_t	j;
+	char	*dest;
+	char	*source;
+	size_t	len;
+	size_t	destlen;
 
-	s_dst = ft_strlen(dst);
-	s_src = ft_strlen(src);
-	j = s_dst;
-	if (size <= 0)
-		return (s_src);
-	while (s_src)
+	dest = dst;
+	source = (char *)src;
+	len = size;
+	while (len-- != 0 && *dest != '\0')
+		dest++;
+	destlen = dest - dst;
+	len = size - destlen;
+	if (len == 0)
+		return (destlen + ft_strlen(source));
+	while (*source != '\0')
 	{
-		dst[j] = *src++;
-		j++;
-		if (j == size - 1)
-			break ;
+		if (len != 1)
+		{
+			*dest++ = *source;
+			len--;
+		}
+		source++;
 	}
-	dst[j] = '\0';
-	return (s_dst + s_src);
+	*dest = '\0';
+	return (destlen + (source - src));
 }
+
 /*
 
 int main(void)
@@ -72,23 +80,17 @@ int main()
 */
 
 /*
-The strlcat() function concatenates 
-strings
-respectively. They are designed to be safer, more consistent,
-and less error prone replacements for strncpy(3) and 
-strncat(3).
-Unlike those functions, strlcat() takes the full
-size of the buffer (not just the length) and guarantees 
-to NUL-terminate
-the result (as long as size is larger than 0 or, in the case 
-of strlcat(),
-as long as there is at least one byte free in dst).  Note that 
-a byte for the NUL
-should be included in size.  Also note that strlcpy() and 
-strlcat() only oper‐
-ate on true “C” strings.  This means that for strlcat() both 
-src and dst must
-be NUL-terminated.
+The strlcat() function concatenates strings respectively.
+They are designed to be safer, more consistent, and less
+error prone replacements for strncpy(3) and strncat(3).
+Unlike those functions, strlcat() takes the full size of
+the buffer (not just the length) and guarantees to
+NUL-terminate the result (as long as size is larger than 0
+or, in the case of strlcat(), as long as there is at least
+one byte free in dst).  Note that a byte for the NUL should
+be included in size.  Also note that strlcpy() and strlcat()
+only operate on true “C” strings. This means that for strlcat()
+both src and dst must be NUL-terminated.
 
 The strlcat() function appends the NUL-terminated string src
  to the end of dst.
