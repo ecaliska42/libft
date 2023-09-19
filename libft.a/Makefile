@@ -18,7 +18,6 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 	$(AR) -r $@ $?
 
-
 %.o: %.c
 	$(CC) -c $(CFLAGS) $?
 
