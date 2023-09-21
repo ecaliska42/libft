@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 19:32:06 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/14 20:50:24 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/21 18:07:49 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		return ((char *)big);
 	if (len <= 0)
 		return (NULL);
-	if (len > strlen (big))
-		len = strlen(big);
+	if (len > ft_strlen (big))
+		len = ft_strlen(big);
 	while (big[i])
 	{
 		j = 0;

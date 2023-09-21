@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 20:09:16 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/14 20:48:44 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/20 18:28:29 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_word(char const *s, char c)
+static int	count_word(char const *s, char c)
 {
 	int	i;
 	int	word;
@@ -36,7 +36,7 @@ int	count_word(char const *s, char c)
 	return (word);
 }
 
-char	**freeing(char **str, int j)
+static char	**freeing(char **str, int j)
 {
 	int	i;
 
@@ -50,7 +50,7 @@ char	**freeing(char **str, int j)
 	return (NULL);
 }
 
-char	*duplic(const char *s, int c)
+static char	*duplic(const char *s, int c)
 {
 	char	*dup;
 	int		i;
@@ -74,7 +74,7 @@ char	*duplic(const char *s, int c)
 	return (dup);
 }
 
-char	**isnot(char **str)
+static char	**isnot(char **str)
 {
 	free(str);
 	str = malloc(sizeof(char *));

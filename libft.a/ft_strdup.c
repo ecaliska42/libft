@@ -3,24 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 19:31:59 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/15 13:04:29 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/20 18:25:30 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	size(char *src)
-{
-	int	i;
-
-	i = 0;
-	while (src[i])
-		i++;
-	return (i);
-}
 
 char	*ft_strdup(const char *s)
 {

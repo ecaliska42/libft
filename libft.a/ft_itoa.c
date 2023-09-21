@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecaliska <ecaliska@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 21:25:32 by ecaliska          #+#    #+#             */
-/*   Updated: 2023/09/14 20:45:49 by ecaliska         ###   ########.fr       */
+/*   Updated: 2023/09/20 18:31:12 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	len(int n)
+static int	len(int n)
 {
 	int	i;
 
@@ -25,7 +25,7 @@ int	len(int n)
 	return (i);
 }
 
-char	string(int j, char *str, int n)
+static char	string(int j, char *str, int n)
 {
 	if (n < 0)
 	{
